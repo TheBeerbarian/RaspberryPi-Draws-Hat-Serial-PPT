@@ -31,7 +31,7 @@ class MyApp(Frame):
         self.label.pack(side=LEFT)
         self.canvas1.pack(side=LEFT)
         self.label2 = Label(self.myframe, text='SWR')
-        self.swr = Label(self.myframe, text='1.2')
+        self.swr = Label(self.myframe, text='1.1')
         self.label2.pack(side=LEFT)
         self.swr.pack(side=LEFT)
         self.update()
@@ -63,9 +63,11 @@ class MyApp(Frame):
                 if fact <> 1: 
                     swr = (1+fact)/(1-fact)
                     #print ("swr",swr)
-                    self.swr['text']="1:{:.2f}".format(swr)
-            if (in6 ==0 and in7==0):
-                   self.swr['text']="1:{:.2f}".format(swr)
+                    self.swr['text']="1:{:.2f}   ".format(swr)
+            else:
+                   #if (in6 <=0 and in7<=0):
+                   swr=1;
+                   self.swr['text']="1:{:.2f}   ".format(swr)
         finally:
             sensors.cleanup()
             
