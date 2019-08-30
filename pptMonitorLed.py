@@ -5,8 +5,8 @@ from Tkinter import *
 import RPi.GPIO as GPIO
 import time
 import serial
-import usb.core
-import usb.util
+#import usb.core
+#import usb.util
 import sensors
 
 
