@@ -1,0 +1,21 @@
+TODO put this info into a form that someone else will understand!!!
+
+pip install pysensors
+
+sudo apt-get install raspberrypi-kernel-headers
+git clone https://github.com/freemed/tty0tty
+Need to build and then 
+sudo insmod tty0tty.ko 
+
+
+
+mkdir /home/pi/.config/autostart
+nano /home/pi/.config/autostart/ppt.desktop
+
+
+[Desktop Entry]
+Type=Application
+Name=PPT
+Exec=/usr/bin/python /home/pi/dev/github/RaspberryPi-Draws-Hat-Serial-PPT/pptMonitorLed.py
+
+
